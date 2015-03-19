@@ -69,7 +69,7 @@ function compileOne (grunt, compile, src, dest, options) {
         reject(err);
       } else {
         if (options.sourceMaps) {
-          sourceMapName = path.basename(src, path.extname(src)) + '.map';
+          sourceMapName = path.basename(src) + '.map';
           sourceMapPath = path.join(dest, '..',  sourceMapName);
           grunt.file.write(sourceMapPath, result[1]);
           grunt.log.debug('SourceMap written to "' + sourceMapName + '"');
